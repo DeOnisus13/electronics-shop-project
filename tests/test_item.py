@@ -55,3 +55,13 @@ def test_instantiate_from_csv():
     assert Item.all[0].quantity == 3
 
     os.remove("test_file.csv")
+
+
+def test_repr(test_data):
+    assert repr(test_data[0]) == "Item('Смартфон', 10000, 5)"
+    assert repr(test_data[1]) == "Item('Ноутбук', 25000, 3)"
+
+
+def test_str(test_data):
+    assert str(test_data[0]) == "Смартфон"
+    assert str(test_data[1]) == "Ноутбук"
